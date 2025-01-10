@@ -1,0 +1,50 @@
+---
+const card = {
+  name: "John Doe",
+  title: "Software Architect",
+  email: "john@example.com",
+  linkedin: "linkedin.com/in/johndoe",
+  github: "github.com/johndoe",
+  twitter: "@johndoe"
+};
+---
+
+<section id="virtual-card" class="card-section">
+  <div class="card">
+    <div class="card-content">
+      <h2>{card.name}</h2>
+      <h3>{card.title}</h3>
+      <div class="contact-info">
+        <a href={`mailto:${card.email}`}>{card.email}</a>
+        <a href={`https://${card.linkedin}`}>LinkedIn</a>
+        <a href={`https://${card.github}`}>GitHub</a>
+        <a href={`https://twitter.com/${card.twitter}`}>Twitter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .card-section {
+    margin: 2rem 0;
+  }
+  .card {
+    background: linear-gradient(45deg, rgba(var(--accent), 0.1), rgba(var(--accent-light), 0.1));
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .contact-info {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  .contact-info a {
+    color: rgb(var(--accent-light));
+    text-decoration: none;
+  }
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+</style>

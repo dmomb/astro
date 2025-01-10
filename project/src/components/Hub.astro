@@ -1,0 +1,49 @@
+---
+const links = [
+  { title: "GitHub", url: "https://github.com/johndoe", icon: "github" },
+  { title: "LinkedIn", url: "https://linkedin.com/in/johndoe", icon: "linkedin" },
+  { title: "Twitter", url: "https://twitter.com/johndoe", icon: "twitter" },
+  { title: "Blog", url: "#", icon: "blog" }
+];
+---
+
+<section id="hub" class="hub-section">
+  <h2 class="text-gradient">Connect & Follow</h2>
+  <div class="links-grid">
+    {links.map(link => (
+      <a href={link.url} class="hub-link" target="_blank" rel="noopener noreferrer">
+        <span class="link-title">{link.title}</span>
+      </a>
+    ))}
+  </div>
+</section>
+
+<style>
+  .hub-section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+    border-radius: 8px;
+  }
+  .links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .hub-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(var(--accent-light), 0.1);
+    border-radius: 8px;
+    text-decoration: none;
+    color: rgb(var(--accent-light));
+    transition: transform 0.2s;
+  }
+  .hub-link:hover {
+    transform: translateY(-3px);
+    background: rgba(var(--accent-light), 0.2);
+  }
+</style>

@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Bio from '../components/Bio.astro';
+import CoverLetter from '../components/CoverLetter.astro';
+import VirtualCard from '../components/VirtualCard.astro';
+import Projects from '../components/Projects.astro';
+import Portfolio from '../components/Portfolio.astro';
+import Hub from '../components/Hub.astro';
+---
+
+<Layout title="John Doe - Software Architect">
+  <main>
+    <Bio />
+    <VirtualCard />
+    <CoverLetter />
+    <Projects />
+    <Portfolio />
+    <Hub />
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 900px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+</style>

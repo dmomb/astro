@@ -1,0 +1,36 @@
+---
+const coverLetter = {
+  greeting: "Dear Hiring Manager,",
+  paragraphs: [
+    "I am writing to express my interest in contributing to innovative software projects that challenge the status quo.",
+    "With extensive experience in reactive programming and domain-driven design, I bring a unique perspective to software architecture that emphasizes scalability, maintainability, and business value.",
+    "I look forward to discussing how my skills and experience can benefit your organization."
+  ],
+  closing: "Best regards,"
+};
+---
+
+<section id="cover-letter" class="cover-section">
+  <h2 class="text-gradient">Cover Letter</h2>
+  <div class="letter">
+    <p>{coverLetter.greeting}</p>
+    {coverLetter.paragraphs.map(p => <p>{p}</p>)}
+    <p>{coverLetter.closing}</p>
+  </div>
+</section>
+
+<style>
+  .cover-section {
+    padding: 2rem;
+    margin: 2rem 0;
+    background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+    border-radius: 8px;
+  }
+  .letter {
+    margin-top: 1rem;
+    line-height: 1.8;
+  }
+  .letter p {
+    margin-bottom: 1rem;
+  }
+</style>
